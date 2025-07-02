@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* 基準字體大小，1rem = 16px */
+}
+
+body {
+  margin: 0;
+  height: 100vh; /* 讓 body 高度填滿視窗 */
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  align-items: center;     /* 垂直置中 */
+  background: #f0f4f8;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;  /* 垂直排列 */
+  justify-content: space-between; /* 上下置頂與置底 */
+  height: 80vh;  /* 高度約80%視窗高度，讓內部可伸展 */
+  width: 100%;
+  max-width: 31.25rem; /* 500px / 16 = 31.25rem */
+  background: white;
+  padding: 1.875rem; /* 30px / 16 = 1.875rem */
+  border-radius: 1.25rem; /* 20px / 16 = 1.25rem */
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1); /* 10px & 20px 換算 */
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 1.25rem 0; /* 0 0 20px 0 */
+  color: #333;
+}
+
+.todo-container {
+  flex-grow: 1; /* 撐滿中間空間 */
+  overflow-y: auto; /* 超出會出現滾動條 */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.input-area {
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  gap: 0.625rem; /* 10px / 16 */
+  margin-top: 1.25rem; /* 20px / 16 */
+}
+
+#todo-input {
+  flex-grow: 1;
+  padding: 0.625rem; /* 10px */
+  font-size: 1rem; /* 16px */
+  border-radius: 0.5rem; /* 8px */
+  border: 1px solid #ccc;
+}
+
+#add-btn {
+  padding: 0.625rem 1.25rem; /* 10px 20px */
+  font-size: 1rem;
+  border-radius: 99em;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#add-btn:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.25rem; /* 20px */
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 0.75rem 1rem; /* 12px 16px */
+  margin-bottom: 0.625rem; /* 10px */
+  border-radius: 0.625rem; /* 10px */
+  transition: background 0.2s;
+}
+
+li:hover {
+  background: #e0f0ff;
+}
+
+.delete-btn {
+  font-size: 1.125rem; /* 18px */
+  color: #ff4d4d;
+  cursor: pointer;
+  margin-left: 0.9375rem; /* 15px */
+}
+
+.delete-btn:hover {
+  color: #c40000;
+}
